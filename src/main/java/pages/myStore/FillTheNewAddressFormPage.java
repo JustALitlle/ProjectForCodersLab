@@ -38,8 +38,6 @@ public class FillTheNewAddressFormPage {
         cityInput.sendKeys(city);
         postcodeInput.sendKeys(postcode);
         countryInput.click();
-
-
         phoneInput.sendKeys(phone);
     }
 
