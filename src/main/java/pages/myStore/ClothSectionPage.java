@@ -26,7 +26,7 @@ public class ClothSectionPage {
     @FindBy(id = "quantity_wanted")
     private WebElement qualityOfSweaterInput;
 
-    @FindBy(className= "add-to-cart")
+    @FindBy(className = "add-to-cart")
     private WebElement addToCart;
 
     public void chooseCategory() {
@@ -43,14 +43,12 @@ public class ClothSectionPage {
     }
 
 
+    public void qualityOfSweater() {
+
+        qualityOfSweaterInput.clear();
+        qualityOfSweaterInput.sendKeys("5");
+        addToCart.click();
 
 
-        public void qualityOfSweater () {
-
-            qualityOfSweaterInput.clear();
-            qualityOfSweaterInput.sendKeys("5");
-            addToCart.click();
-
-
-        }
+    }
 }

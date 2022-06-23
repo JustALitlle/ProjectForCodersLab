@@ -42,7 +42,7 @@ public class StepDefsV2 {
     }
 
     @When("Add Hummingbird Printed Sweater with size M and add 5 pieces.")
-    public  void  sweaterDetalis(){
+    public  void  sweaterDetails(){
         ClothSectionPage clothSectionPage = new ClothSectionPage(driver);
         clothSectionPage.hummingbirdChoice();
         clothSectionPage.sizeChoiceOfSweater();

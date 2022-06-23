@@ -12,6 +12,7 @@ public class MyStoreLoginPage {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
+
     @FindBy(name = "email")
     private WebElement loginEmailInput;
     @FindBy(name = "password")

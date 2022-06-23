@@ -59,7 +59,7 @@ public class StepDefs {
     }
 
     @And("close the browser")
-    public void closeBrowser(){
+    public void closeBrowser() {
         driver.quit();
     }
 

@@ -29,6 +29,7 @@ public class CheckOutPage {
     private WebElement termsOfConditionInput;
     @FindBy(className = "ps-shown-by-js")
     private WebElement orderWithObligationInput;
+
     public void proceedToCheckOut() {
 
 
@@ -39,7 +40,7 @@ public class CheckOutPage {
         confirmDeliveryOptionInput.click();
         payByCheckInput.click();
         termsOfConditionInput.click();
-        //confirmDeliveryOptionInput.click();
+
         new WebDriverWait(driver, 5).until(ExpectedConditions.elementToBeClickable(By.id("payment-confirmation"))).click();
 
     }
