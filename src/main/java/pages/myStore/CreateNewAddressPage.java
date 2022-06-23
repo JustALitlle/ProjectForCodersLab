@@ -6,11 +6,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class CreateNewAddressPage {
-    private WebDriver driver;
+    private  WebDriver driver;
 
     public CreateNewAddressPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
+
     }
 
     @FindBy(xpath = "//a[@href='https://mystore-testlab.coderslab.pl/index.php?controller=address']")

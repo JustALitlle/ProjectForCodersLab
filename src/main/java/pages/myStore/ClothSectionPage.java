@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ClothSectionPage {
-    private WebDriver driver;
+    private final WebDriver driver;
 
     public ClothSectionPage(WebDriver driver) {
         this.driver = driver;
@@ -53,7 +53,7 @@ public class ClothSectionPage {
 
     }
     public String getDiscountText(){
-        WebElement discountText = driver.findElement(By.className("discount discount-percentage"));
+        WebElement discountText = driver.findElement(By.className("discount-percentage"));
         return discountText.getText();
     }
 }

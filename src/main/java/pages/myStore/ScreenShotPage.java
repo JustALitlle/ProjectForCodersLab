@@ -11,7 +11,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class ScreenShotPage {
-    private final WebDriver driver;
+    private  WebDriver driver;
 
     public ScreenShotPage(WebDriver driver) {
         this.driver = driver;

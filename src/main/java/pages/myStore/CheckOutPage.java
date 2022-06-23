@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CheckOutPage {
-    private final WebDriver driver;
+    private  WebDriver driver;
 
     public CheckOutPage(WebDriver driver) {
         this.driver = driver;

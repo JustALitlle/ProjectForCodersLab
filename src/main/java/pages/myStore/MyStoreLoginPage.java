@@ -7,8 +7,12 @@ import org.openqa.selenium.support.PageFactory;
 
 public class MyStoreLoginPage {
 
+    private  WebDriver driver;
+
     public MyStoreLoginPage(WebDriver driver) {
+        this.driver = driver;
         PageFactory.initElements(driver, this);
+
     }
 
     @FindBy(name = "email")

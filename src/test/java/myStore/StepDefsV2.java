@@ -4,6 +4,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pages.myStore.CheckOutPage;
@@ -38,15 +39,22 @@ public class StepDefsV2 {
     @And("Go to cloth section.")
     public void chooseCategory() {
         ClothSectionPage clothSectionPage = new ClothSectionPage(driver);
+
         clothSectionPage.chooseCategory();
+
+
     }
 
     @When("Add Hummingbird Printed Sweater with size M and add 5 pieces.")
-    public  void  sweaterDetails(){
+    public void sweaterDetails() {
         ClothSectionPage clothSectionPage = new ClothSectionPage(driver);
+
         clothSectionPage.hummingbirdChoice();
         clothSectionPage.sizeChoiceOfSweater();
         clothSectionPage.qualityOfSweater();
+
+        Assert.assertTrue(clothSectionPage.getDiscountText().contains("20%"));
+
     }
 
     @And("Process checkout.")
@@ -57,14 +65,14 @@ public class StepDefsV2 {
     }
 
     @Then("Take a screenshot of the order confirmation and the amount.")
-    public void  screenShot() throws IOException {
+    public void screenShot() throws IOException {
         ScreenShotPage ScreenShotPage = new ScreenShotPage(driver);
         ScreenShotPage.main();
     }
 
 
     @And("Close browser.")
-    public void closeBrowser(){
+    public void closeBrowser() {
         driver.quit();
     }
 
